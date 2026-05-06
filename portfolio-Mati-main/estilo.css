@@ -92,8 +92,8 @@ html {
     border: 3px solid #ff6a00; /* más fino opcional */
     display: block;
     border-radius: 10px;       /* 👈 bordes suaves */
-    width: 280px;              /* controlás tamaño */
-    height: 300px;             /* forma rectangular */
+    width: 285px;              /* controlás tamaño */
+    height: 310px;             /* forma rectangular */
     object-fit: cover;       /* evita deformación */
 }
 
