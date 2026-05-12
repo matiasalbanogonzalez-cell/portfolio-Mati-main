@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Detalle del Proyecto</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1e2326;
+            font-family: 'Work Sans';
+        }
+        .proyecto-detalle {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background-color: #1e2326;
+            margin-top: 60px;
+        }
+        .proyecto-container {
+            max-width: 900px;
+            width: 100%;
+            background: #252a2e;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .proyecto-imagen {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .proyecto-info {
+            padding: 40px;
+        }
+        .proyecto-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff6a00;
+        }
+        .proyecto-info p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+        .botones-proyecto {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .btn-volver {
+            display: inline-block;
+            background-color: transparent;
+            border: 2px solid #ff6a00;
+            width: fit-content;
+            padding: 10px 22px;
+            font-size: 1rem;
+            color: #ff6a00;
+            position: relative;
+            z-index: 10;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn-volver .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: #ff6a00;
+            z-index: -1;
+            transition: width 1s;
+        }
+        .btn-volver:hover {
+            color: #fff;
+        }
+        .btn-volver:hover .overlay {
+            width: 100%;
+        }
+        .proyecto-no-encontrado {
+            text-align: center;
+            padding: 40px;
+            color: #ccc;
+        }
+        .proyecto-no-encontrado h2 {
+            color: #ff6a00;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="index.html">Matias</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="index.html#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="index.html#skills" onclick="seleccionar()">HABILIDADES</a></li>
+                    <li><a href="index.html#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="index.html#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="index.html#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <section class="proyecto-detalle">
+        <div class="proyecto-container" id="proyecto-container">
+            <!-- El contenido se cargará con JavaScript -->
+        </div>
+    </section>
+
+    <footer>
+        <a href="index.html#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-skype"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-solid fa-rss"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Datos de los proyectos
+        const proyectos = {
+            1: {
+                titulo: "Diseño Creativo - Proyecto 1",
+                imagen: "img/p1.jpg",
+                descripcion: "Este es un proyecto de diseño creativo enfocado en fotografía profesional. Se utilizaron técnicas avanzadas de composición y edición para crear una imagen impactante. El proyecto demuestra el dominio de herramientas como Photoshop y la creatividad visual."
+            },
+            2: {
+                titulo: "Diseño Creativo - Proyecto 2",
+                imagen: "img/p2.jpg",
+                descripcion: "Segundo proyecto de la serie de diseños creativos. Este trabajo se destaca por su uso innovador de la luz y las sombras, creando una atmósfera única. Se trata de una fotografía que combina elementos tradicionales con toques modernos."
+            },
+            3: {
+                titulo: "Diseño Creativo - Proyecto 3",
+                imagen: "img/p3.jpg",
+                descripcion: "Tercer proyecto que explora nuevas perspectivas en la fotografía. Este trabajo fue realizado utilizando técnicas de iluminación profesional y postproducción avanzada, resultando en una imagen de alta calidad y gran impacto visual."
+            },
+            4: {
+                titulo: "Diseño Creativo - Proyecto 4",
+                imagen: "img/p4.jpg",
+                descripcion: "Cuarto proyecto que continúa con la línea creativa. Este proyecto demuestra la versatilidad en diferentes estilos y técnicas fotográficas. Se aplicaron conocimientos avanzados de composición y edición para lograr el resultado final."
+            },
+            5: {
+                titulo: "Diseño Creativo - Proyecto 5",
+                imagen: "img/p5.jpg",
+                descripcion: "Quinto proyecto de la galería. Este trabajo se caracteriza por su originalidad y enfoque artístico. Utiliza elementos visuales únicos que lo distinguen del resto, demostrando la capacidad de innovación creativa."
+            },
+            6: {
+                titulo: "Proyecto Asesorando",
+                imagen: "img/asesorando.png",
+                descripcion: "Proyecto especial que muestra experiencia en asesoramiento profesional. Esta imagen captura el momento de interacción y colaboración, demostrando habilidades en comunicación y trabajo en equipo."
+            }
+        };
+
+        // Función para obtener el parámetro de la URL
+        function obtenerParametroURL(parametro) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(parametro);
+        }
+
+        // Función para cargar el proyecto
+        function cargarProyecto() {
+            const idProyecto = obtenerParametroURL('id');
+            const proyecto = proyectos[idProyecto];
+            const contenedor = document.getElementById('proyecto-container');
+
+            if (proyecto) {
+                contenedor.innerHTML = `
+                    <img src="${proyecto.imagen}" alt="${proyecto.titulo}" class="proyecto-imagen">
+                    <div class="proyecto-info">
+                        <h2>${proyecto.titulo}</h2>
+                        <p>${proyecto.descripcion}</p>
+                        <div class="botones-proyecto">
+                            <a href="index.html#portfolio" class="btn-volver">
+                                <i class="fa-solid fa-arrow-left"></i> Volver al Portfolio
+                                <span class="overlay"></span>
+                            </a>
+                            <button class="btn-volver" onclick="navegarProyecto(-1)">
+                                <i class="fa-solid fa-chevron-left"></i> Anterior
+                                <span class="overlay"></span>
+                            </button>
+                            <button class="btn-volver" onclick="navegarProyecto(1)">
+                                Siguiente <i class="fa-solid fa-chevron-right"></i>
+                                <span class="overlay"></span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            } else {
+                contenedor.innerHTML = `
+                    <div class="proyecto-no-encontrado">
+                        <h2>Proyecto no encontrado</h2>
+                        <p>Lo sentimos, no pudimos encontrar el proyecto solicitado.</p>
+                        <a href="index.html#portfolio" class="btn-volver">Volver al Portfolio</a>
+                    </div>
+                `;
+            }
+        }
+
+        // Función para navegar entre proyectos
+        function navegarProyecto(direccion) {
+            const idActual = parseInt(obtenerParametroURL('id')) || 1;
+            let idNuevo = idActual + direccion;
+
+            // Validar que el ID esté dentro del rango válido (1-6)
+            if (idNuevo < 1) idNuevo = 6;
+            if (idNuevo > 6) idNuevo = 1;
+
+            window.location.href = `project.html?id=${idNuevo}`;
+        }
+
+        // Cargar el proyecto cuando la página se cargue
+        window.addEventListener('load', cargarProyecto);
+    </script>
+</body>
+</html>
