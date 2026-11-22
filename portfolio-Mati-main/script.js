@@ -18,19 +18,13 @@ function seleccionar(){
 //Funcion que aplica las animaciones de las habilidades
 function efectoHabilidades(){
     var skills = document.getElementById("skills");
+    if (!skills) return; // en project.html no existe la sección
     var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
     if(distancia_skills >= 300){
         let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("javascript");
-        habilidades[1].classList.add("htmlcss");
-        habilidades[2].classList.add("photoshop");
-        habilidades[3].classList.add("wordpress");
-        habilidades[4].classList.add("drupal");
-        habilidades[5].classList.add("comunicacion");
-        habilidades[6].classList.add("trabajo");
-        habilidades[7].classList.add("creatividad");
-        habilidades[8].classList.add("dedicacion");
-        habilidades[9].classList.add("proyect");
+        const clases = ["javascript", "htmlcss", "photoshop", "wordpress", "drupal", "ia",
+                        "comunicacion", "trabajo", "creatividad", "dedicacion", "proyect"];
+        clases.forEach((c, i) => { if (habilidades[i]) habilidades[i].classList.add(c); });
     }
 }
 
@@ -39,3 +33,46 @@ function efectoHabilidades(){
 window.onscroll = function(){
     efectoHabilidades();
 } 
+/* =========================================================
+   EMAIL
+   En la compu, "mailto:" no hace nada si no hay un programa de
+   correo instalado. Por eso en la compu abrimos Gmail en una
+   pestaña nueva (y copiamos el email); en el celular usamos
+   mailto:, que abre la app de correo.
+   ========================================================= */
+const MI_EMAIL = "matiasalbanogonzalez@gmail.com";
+const esCelularEmail = window.matchMedia("(pointer: coarse)").matches;
+
+function avisoEmail(texto) {
+    let t = document.getElementById("aviso-email");
+    if (!t) {
+        t = document.createElement("div");
+        t.id = "aviso-email";
+        t.setAttribute("role", "status");
+        document.body.appendChild(t);
+    }
+    t.textContent = texto;
+    t.classList.add("visible");
+    clearTimeout(t._timer);
+    t._timer = setTimeout(() => t.classList.remove("visible"), 3500);
+}
+
+function abrirEmail(asunto = "", cuerpo = "") {
+    if (esCelularEmail) {
+        window.location.href = `mailto:${MI_EMAIL}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+        return;
+    }
+    const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${MI_EMAIL}&su=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+    window.open(gmail, "_blank", "noopener");
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(MI_EMAIL).catch(() => {});
+    }
+    avisoEmail("Se abrió Gmail en otra pestaña. También copié mi email: " + MI_EMAIL);
+}
+
+document.addEventListener("click", e => {
+    const link = e.target.closest('a[href^="mailto:"]');
+    if (!link || esCelularEmail) return;   // en el celular, el mailto normal
+    e.preventDefault();
+    abrirEmail("Contacto desde el portfolio");
+});

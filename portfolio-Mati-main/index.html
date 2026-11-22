@@ -5,8 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="estilo.css">
+    <title>Matías González | Desarrollador Web Full Stack</title>
+    <meta name="description" content="Portfolio de Matías González, desarrollador web full stack en Villa Carlos Paz, Córdoba. Proyectos con React, Node.js, Express, MongoDB y PostgreSQL. ¿Tenés una idea? Trabajemos juntos.">
+    <meta name="theme-color" content="#000000">
+    <!-- Vista previa al compartir el link (WhatsApp, LinkedIn, Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Matías González · Portfolio">
+    <meta property="og:title" content="Matías González | Desarrollador Web Full Stack">
+    <meta property="og:description" content="Aplicaciones web completas con React, Node.js y bases de datos. Mirá mis proyectos con sus pantallas y contame tu idea.">
+    <meta property="og:url" content="https://matias-gonzalez-dev.web.app/">
+    <meta property="og:image" content="https://matias-gonzalez-dev.web.app/img/og-portfolio.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Matías González, Desarrollador Web Full Stack">
+    <meta property="og:locale" content="es_AR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://matias-gonzalez-dev.web.app/img/og-portfolio.jpg">
+    <link rel="stylesheet" href="estilo.css?v=12">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -15,7 +30,7 @@
     <div class="contenedor-header">
         <header>
             <div class="logo">
-                <a href="#">Matias</a>
+                <a href="#inicio">Matias</a>
             </div>
             <nav id="nav">
                 <ul>
@@ -37,17 +52,18 @@
     <section id="inicio" class="inicio">
         <div class="contenido-banner">
             <div class="contenedor-img">
-                <img src="img/perfil.png" alt="">
+                <img src="img/perfil.webp" alt="Matías González" width="285" height="310">
             </div>
             <h1>Mati Gonzalez</h1>
-            <h2>Desarrollador Web - UI/UX</h2>
+            <h2>Desarrollador Web Full Stack</h2>
             <div class="redes">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-skype"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-solid fa-rss"></i></a>
+                <a href="https://github.com/matiasalbanogonzalez-cell" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://wa.me/5493515160982" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:matiasalbanogonzalez@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <!-- LinkedIn: cuando tengas el link, descomentá esta línea y pegalo en href
+                <a href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a> -->
             </div>
+            <a href="#trabajemos" class="cta-portada">Contame tu idea <i class="fa-solid fa-arrow-down"></i></a>
         </div>
     </section>
 
@@ -56,28 +72,32 @@
     
         <div class="contenido-seccion">
             <h2>Sobre Mí</h2>
-            <p><span>Hola, soy Matías González.</span> Actualmente estudio la carrera de Desarrollo Web en el Instituto Superior Santo Domingo. Me especializo en la creación de sitios web modernos, responsivos y funcionales utilizando HTML, CSS y JavaScript. Me apasiona el diseño de interfaces y la experiencia de usuario, 
-                y me encuentro en constante aprendizaje para seguir creciendo profesionalmente.</p>
+            <p><span>Hola, soy Matías González.</span> Soy desarrollador web full stack y estudio en el Instituto Superior Santo Domingo.
+                Construyo aplicaciones completas: desde la base de datos y la API (Node.js, Express, MongoDB y PostgreSQL) hasta interfaces
+                modernas y responsive con React, HTML, CSS y JavaScript. Hice sistemas de turnos con login y roles, una app de reservas para un hotel
+                y sitios publicados en Firebase. Uso herramientas de IA (Claude, Claude Code, Antigravity y Gemini) para desarrollar,
+                depurar y documentar más rápido, siempre revisando y entendiendo el código que entregan.
+                Me interesan también la ciberseguridad y el soporte IT, y sigo aprendiendo todos los días.</p>
             <div class="fila">
                 <!-- datos personales -->
                 <div class="col">
                     <h3>Datos Personales</h3>
                     <ul>
                         <li>
-                            <strong>Cumpleaños</strong>
-                            02-06-1982
-                        </li>
-                        <li>
                             <strong>Teléfono</strong>
-                            3515160982
+                            <a href="https://wa.me/5493515160982" target="_blank" rel="noopener" class="dato-link">351 516-0982</a>
                         </li>
                         <li>
                             <strong>Email</strong>
-                            matiasalbanogonzalez@gmail.com
+                            <a href="mailto:matiasalbanogonzalez@gmail.com" class="dato-link">matiasalbanogonzalez@gmail.com</a>
                         </li>
                         <li>
                             <strong>Website</strong>
-                            www.example.com
+                            <a href="https://matias-gonzalez-dev.web.app" class="dato-link">matias-gonzalez-dev.web.app</a>
+                        </li>
+                        <li>
+                            <strong>GitHub</strong>
+                            <a href="https://github.com/matiasalbanogonzalez-cell" target="_blank" rel="noopener" class="dato-link">matiasalbanogonzalez-cell</a>
                         </li>
                         <li>
                             <strong>Dirección</strong>
@@ -103,12 +123,12 @@
                             <span>MUSICA</span>
                         </div>
                         <div class="interes">
-                            <i class="fa-solid fa-plane"></i>
-                            <span>VIAJAR</span>
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span class="interes-largo">CIBERSEGURIDAD</span>
                         </div>
                         <div class="interes">
-                            <i class="fa-brands fa-apple"></i>
-                            <span>MAC OS</span>
+                            <i class="fa-brands fa-linux"></i>
+                            <span>LINUX</span>
                         </div>
                         <div class="interes">
                             <i class="fa-solid fa-person-hiking"></i>
@@ -130,10 +150,20 @@
                     </div>
                 </div>
             </div>
-            <button>
-                Descargar CV <i class="fa-solid fa-download"></i>
-                <span class="overlay"></span>
-            </button>
+            <div class="botones-sobremi">
+                <a href="cv/CV-Matias-Gonzalez.pdf" download="CV-Matias-Gonzalez.pdf" class="boton-link">
+                    <button>
+                        Descargar CV <i class="fa-solid fa-download"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </a>
+                <a href="https://github.com/matiasalbanogonzalez-cell" target="_blank" rel="noopener" class="boton-link">
+                    <button>
+                        Ver mi GitHub <i class="fa-brands fa-github"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -146,15 +176,7 @@
                 <div class="col">
                     <h3>Technical Skills</h3>
                     <div class="skill">
-                        <span>Javascript</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>75%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>HTML & CSS</span>
+                        <span>JavaScript</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>80%</span>
@@ -162,26 +184,42 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <span>Photoshop</span>
+                        <span>HTML & CSS</span>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>65%</span>
+                                <span>85%</span>
                             </div>
                         </div>
                     </div>
                     <div class="skill">
-                        <span>Wordpress</span>
+                        <span>React</span>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>81%</span>
+                                <span>70%</span>
                             </div>
                         </div>
                     </div>
                     <div class="skill">
-                        <span>Drupa</span>
+                        <span>Node.js / Express</span>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>55%</span>
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>MongoDB / PostgreSQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>IA aplicada al desarrollo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
                             </div>
                         </div>
                     </div>
@@ -189,6 +227,30 @@
                 <!-- Professional Skills -->
                 <div class="col">
                     <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Resolución de problemas</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo autónomo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Aprendizaje continuo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="skill">
                         <span>Comunicación</span>
                         <div class="barra-skill">
@@ -198,34 +260,10 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <span>Trabajo en Equipo</span>
+                        <span>Organización (Git)</span>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>85%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Creatividad</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>95%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Dedicación</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>79%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Proyect Management</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>74%</span>
+                                <span>75%</span>
                             </div>
                         </div>
                     </div>
@@ -242,30 +280,33 @@
                 <div class="col izquierda">
                     <h3>Educación</h3>
                     <div class="item izq">
-                        <h4>Arte y Multimedia</h4>
                         <h4>Desarrollo Web</h4>
-<span class="casa">Instituto Superior Santo Domingo</span>
-<span class="fecha">2024 - Actualidad</span>
-<p>Formación en desarrollo web enfocada en HTML, CSS y JavaScript. Desarrollo de proyectos prácticos, 
-    diseño responsive y buenas prácticas de programación.</p>
+                        <span class="casa">Instituto Superior Santo Domingo</span>
+                        <span class="fecha">2024 - Actualidad</span>
+                        <p>Formación full stack: Programación 2 (Node.js, Express, MongoDB y testing con Jest),
+                            Algoritmos y Estructuras de Datos con desarrollo de apps Android en Java,
+                            Calidad de Software y Testing, y Seguridad y Protección de la Información.</p>
                         <div class="conectori">
                             <div class="circuloi"></div>
                         </div>
                     </div>
                     <div class="item izq">
-                        <h4>Arte y Multimedia</h4>
-                        <span class="casa">Universidad de Oxford</span>
-                        <span class="fecha">2005 - 2008</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <h4>Seguridad y Redes</h4>
+                        <span class="casa">Instituto Superior Santo Domingo</span>
+                        <span class="fecha">2026</span>
+                        <p>Tríada CIA, amenazas y malware. Prácticas de reconocimiento de activos
+                            y análisis de tráfico de red con Advanced IP Scanner, Zenmap (Nmap) y Wireshark.</p>
                         <div class="conectori">
                             <div class="circuloi"></div>
                         </div>
                     </div>
                     <div class="item izq">
-                        <h4>Arte y Multimedia</h4>
-                        <span class="casa">Universidad de Oxford</span>
-                        <span class="fecha">2005 - 2008</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <h4>Aprendizaje autodidacta</h4>
+                        <span class="casa">Proyectos propios y documentación</span>
+                        <span class="fecha">Continuo</span>
+                        <p>React, Zustand, Tailwind CSS, Prisma, PostgreSQL y Firebase, aprendidos
+                            construyendo proyectos reales y publicándolos, con asistentes de IA
+                            (Claude Code, Antigravity) como apoyo para investigar, depurar y escribir tests.</p>
                         <div class="conectori">
                             <div class="circuloi"></div>
                         </div>
@@ -273,31 +314,35 @@
                 </div>
 
                 <div class="col derecha">
-                    <h3>Experiencia de trabajo</h3>
+                    <h3>Experiencia</h3>
                     <div class="item der">
-                        <h4>Desarrollador Web en formación</h4>
-<span class="casa">Proyectos académicos y personales</span>
-<span class="fecha">2024 - Actualidad</span>
-<p>Desarrollo de sitios web y proyectos prácticos aplicando diseño responsive, 
-    estructura semántica y buenas prácticas en HTML, CSS y JavaScript.</p>
+                        <h4>Desarrollador Web Freelance</h4>
+                        <span class="casa">Sitios y aplicaciones web</span>
+                        <span class="fecha">2024 - Actualidad</span>
+                        <p>Sitios y aplicaciones a medida, como Lune Nails, un estudio de uñas con landing animada,
+                            reservas por pasos con calendario, backend Express/MongoDB, login JWT y avisos por email.
+                            También landings como TechVision.</p>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
                     </div>
                     <div class="item der">
-                        <h4>Front Developer</h4>
-                        <span class="casa">Nombre de Compañía</span>
-                        <span class="fecha">2005 - 2008</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <h4>Proyectos Full Stack</h4>
+                        <span class="casa">Académicos y personales</span>
+                        <span class="fecha">2025 - Actualidad</span>
+                        <p>Sistema de Turnos Médicos (trabajo final de Programación 2, defendido en coloquio),
+                            Eleton Digital Guest (app de hotel con React, Prisma y PostgreSQL)
+                            y una app Android de suscripción a streaming en Java.</p>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
                     </div>
                     <div class="item der">
-                        <h4>Front Developer</h4>
-                        <span class="casa">Nombre de Compañía</span>
-                        <span class="fecha">2005 - 2008</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <h4>Recepcionista · Soporte IT de primer nivel</h4>
+                        <span class="casa">Hotel</span>
+                        <span class="fecha">Actualidad</span>
+                        <p>Atención a huéspedes en recepción. Además de mi puesto, resuelvo problemas básicos
+                            de computadoras y sistemas del personal, con una base propia de comandos y soluciones.</p>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
@@ -311,62 +356,29 @@
     <section id="portfolio" class="portfolio">
         <div class="contenido-seccion">
             <h2>PORTFOLIO</h2>
-            <div class="galeria">
-                <a href="project.html?id=1" class="proyecto-link">
-                    <div class="proyecto">
-                        <img src="img/p1.jpg" alt="">
-                        <div class="overlay">
-                            <h3>Diseño Creativo</h3>
-                            <p>Fotografía</p>
-                        </div>
-                    </div>
+            <p class="portfolio-intro">Proyectos reales con su código en GitHub. Hacé clic en cualquiera para ver sus pantallas y funciones.</p>
+            <div class="galeria" id="galeria">
+                <!-- Se completa con proyectos.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION TRABAJEMOS JUNTOS -->
+    <section id="trabajemos" class="trabajemos">
+        <div class="trabajemos-caja">
+            <p class="trabajemos-kicker">¿Tenés una idea o un proyecto?</p>
+            <h2>Trabajemos juntos</h2>
+            <p class="trabajemos-texto">Contame qué tenés en mente. Podés mandarme <strong>fotos, capturas o referencias</strong>
+                y hasta un <strong>audio</strong> explicándolo: te respondo a la brevedad.</p>
+            <div class="trabajemos-botones">
+                <a href="https://wa.me/5493515160982?text=Hola%20Mat%C3%ADas%21%20Vi%20tu%20portfolio%20y%20te%20quiero%20contar%20una%20idea%20/%20proyecto%3A%20" target="_blank" rel="noopener" class="btn-wa">
+                    <i class="fa-brands fa-whatsapp"></i> Contame tu idea por WhatsApp
                 </a>
-                <a href="project.html?id=2" class="proyecto-link">
-                    <div class="proyecto">
-                        <img src="img/p2.jpg" alt="">
-                        <div class="overlay">
-                            <h3>Diseño Creativo</h3>
-                            <p>Fotografía</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="project.html?id=3" class="proyecto-link">
-                    <div class="proyecto">
-                        <img src="img/p3.jpg" alt="">
-                        <div class="overlay">
-                            <h3>Diseño Creativo</h3>
-                            <p>Fotografía</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="project.html?id=4" class="proyecto-link">
-                    <div class="proyecto">
-                        <img src="img/p4.jpg" alt="">
-                        <div class="overlay">
-                            <h3>Diseño Creativo</h3>
-                            <p>Fotografía</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="project.html?id=5" class="proyecto-link">
-                    <div class="proyecto">
-                        <img src="img/p5.jpg" alt="">
-                        <div class="overlay">
-                            <h3>Diseño Creativo</h3>
-                            <p>Fotografía</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="project.html?id=6" class="proyecto-link">
-                    <div class="proyecto">
-                        <img src="img/asesorando.png" alt="">
-                        <div class="overlay">
-                            <h3>Diseño Creativo</h3>
-                            <p>Fotografía</p>
-                        </div>
-                    </div>
+                <a href="mailto:matiasalbanogonzalez@gmail.com" class="btn-mail">
+                    <i class="fa-solid fa-envelope"></i> Prefiero por email
                 </a>
             </div>
+            <p class="trabajemos-nota"><i class="fa-solid fa-image"></i> Fotos &nbsp;·&nbsp; <i class="fa-solid fa-microphone"></i> Audios &nbsp;·&nbsp; <i class="fa-solid fa-file"></i> Archivos</p>
         </div>
     </section>
 
@@ -377,32 +389,39 @@
             <div class="fila">
                 <!-- Formulario -->
                 <div class="col">
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Número telefónico">
-                    <input type="text" placeholder="Dirección de correo">
-                    <input type="text" placeholder="Tema">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>
+                    <form id="form-contacto" novalidate>
+                    <input type="text" id="c-nombre" placeholder="Nombre" required>
+                    <input type="tel" id="c-telefono" placeholder="Número telefónico">
+                    <input type="email" id="c-email" placeholder="Dirección de correo">
+                    <input type="text" id="c-tema" placeholder="Tema">
+                    <textarea id="c-mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                    <p id="c-aviso" class="form-aviso" role="status"></p>
+                    <button type="submit">
                         Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
                         <span class="overlay"></span>
                     </button>
+                    </form>
                 </div>
                 <!-- Mapa -->
                 <div class="col">
-                    <img src="img/ubicacion.png" alt="">
+                    <img src="img/ubicacion.png" alt="Mapa de Villa Carlos Paz">
                     <div class="info">
                         <ul>
                             <li>
                                 <i class="fa-solid fa-location-dot"></i>
-                                Cordoba, Argentina
+                                Villa Carlos Paz, Córdoba
                             </li>
                             <li>
-                                <i class="fa-solid fa-mobile-screen"></i>
-                                Llamanos: 3515160982 
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <a href="https://wa.me/5493515160982" target="_blank" rel="noopener" class="dato-link">351 516-0982</a>
                             </li>
                             <li>
                                 <i class="fa-solid fa-envelope"></i>
-                                matiasalbanogonzalez@gmail.com
+                                <a href="mailto:matiasalbanogonzalez@gmail.com" class="dato-link">matiasalbanogonzalez@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-github"></i>
+                                <a href="https://github.com/matiasalbanogonzalez-cell" target="_blank" rel="noopener" class="dato-link">GitHub</a>
                             </li>
                         </ul>
                     </div>
@@ -417,14 +436,50 @@
             <i class="fa-solid fa-angles-up"></i>
         </a>
         <div class="redes">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-skype"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-solid fa-rss"></i></a>
+            <a href="https://github.com/matiasalbanogonzalez-cell" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://wa.me/5493515160982" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:matiasalbanogonzalez@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="proyectos.js?v=12"></script>
+    <script>
+        // Galería del portfolio armada desde proyectos.js
+        document.getElementById("galeria").innerHTML = proyectos.map(p => `
+            <a href="project.html?id=${p.id}" class="proyecto-link">
+                <div class="proyecto">
+                    <img src="${rutaPantalla(p, 1)}" alt="${p.titulo}" loading="lazy">
+                    <span class="proyecto-cant"><i class="fa-regular fa-images"></i> ${p.pantallas.length}</span>
+                    <div class="overlay">
+                        <h3>${p.titulo}</h3>
+                        <p>${p.categoria}</p>
+                    </div>
+                </div>
+            </a>`).join("");
+    </script>
+
+    <a href="https://wa.me/5493515160982?text=Hola%20Mat%C3%ADas%21%20Vi%20tu%20portfolio%20y%20te%20quiero%20contar%20una%20idea%20/%20proyecto%3A%20" target="_blank" rel="noopener" class="wa-flotante" aria-label="Contame tu idea por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Contame tu idea</span>
+    </a>
+
+    <script src="estrellas.js?v=12"></script>
+    <script src="script.js?v=12"></script>
+    <script>
+        // Formulario de contacto: arma el mail con los datos y abre el correo del visitante
+        document.getElementById("form-contacto").addEventListener("submit", e => {
+            e.preventDefault();
+            const v = id => document.getElementById(id).value.trim();
+            const aviso = document.getElementById("c-aviso");
+            if (!v("c-nombre") || !v("c-mensaje")) {
+                aviso.textContent = "Completá al menos tu nombre y el mensaje.";
+                return;
+            }
+            const asunto = v("c-tema") || "Contacto desde el portfolio";
+            const cuerpo = `${v("c-mensaje")}\n\n—\nNombre: ${v("c-nombre")}\nTeléfono: ${v("c-telefono") || "-"}\nEmail: ${v("c-email") || "-"}`;
+            abrirEmail(asunto, cuerpo);
+            aviso.textContent = "¡Listo! Se abrió tu correo con el mensaje armado: solo falta tocar Enviar.";
+        });
+    </script>
 </body>
 </html>

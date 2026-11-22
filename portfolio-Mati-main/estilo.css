@@ -14,7 +14,7 @@ html {
 
 /* MENU */
 .contenedor-header {
-    background: #1e2326;
+    background: #000;
     position: fixed;
     width: 100%;
     top: 0;
@@ -34,7 +34,7 @@ html {
 .contenedor-header header .logo a {
     font-family: 'Righteous';
     font-size: 36px;
-    color: #ff6a00;
+    color: #ff5f1f;
     text-decoration: none;
 }
 
@@ -62,7 +62,7 @@ html {
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
     z-index: -1;
     transition: width 1s;
 }
@@ -76,7 +76,7 @@ html {
 }
 
 .nav-responsive {
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -86,7 +86,7 @@ html {
 
 /* SECCION I N I C I O */
 .inicio {
-    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)), 
+    background: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, 1)), 
     url(img/fondo.jpg);
     background-size: cover;
     height: 100vh;
@@ -98,7 +98,7 @@ html {
 
 .inicio .contenido-banner {
     padding: 30px;
-    background-color: #1e2326;
+    background-color: #000;
     max-width: 350px;
     margin: auto;
     text-align: center;
@@ -108,7 +108,7 @@ html {
 .inicio .contenido-banner img {
     
     margin-top: 5px;
-    border: 3px solid #ff6a00; /* más fino opcional */
+    border: 3px solid #ff5f1f; /* más fino opcional */
     display: block;
     border-radius: 10px;       /* 👈 bordes suaves */
     width: 285px;              /* controlás tamaño */
@@ -142,11 +142,11 @@ html {
 }
 
 .inicio .contenido-banner .redes a:hover {
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
 }
 
 .sobremi {
-    background-color: #1e2326;
+    background-color: #000;
     color: #fff;
     padding: 50px 20px;
 }
@@ -170,7 +170,7 @@ html {
 }
 
 .sobremi .contenido-seccion p span {
-    color: #ff6a00;
+    color: #ff5f1f;
     font-weight: bold;
 }
 
@@ -198,12 +198,12 @@ html {
 
 .sobremi .fila .col ul li strong {
     display: inline-block;
-    color: #ff6a00;
+    color: #ff5f1f;
     width: 130px;
 }
 
 .sobremi .fila .col ul li span {
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
     padding: 3px;
     font-weight: bold;
     border-radius: 5px;
@@ -217,7 +217,7 @@ html {
 .sobremi .fila .col .contenedor-intereses .interes {
     width: 100px;
     height: 100px;
-    background-color: #252A2E;
+    background-color: #0b0b0b;
     border-radius: 10px;
     margin: 0 15px 15px 0;
     display: flex;
@@ -228,7 +228,7 @@ html {
 }
 
 .sobremi .fila .col .contenedor-intereses .interes:hover {
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
 }
 
 .sobremi .fila .col .contenedor-intereses .interes i {
@@ -256,7 +256,7 @@ html {
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
     z-index: -1;
     transition: 1s;
 }
@@ -267,7 +267,7 @@ html {
 
 /* SECCION S K I L L S */
 .skills {
-    background-color: #252A2E;
+    background-color: #0b0b0b;
     color: #fff;
     padding: 50px 20px;
 }
@@ -308,13 +308,13 @@ html {
 .skills .skill .barra-skill {
     height: 8px;
     width: 80%;
-    background-color: #131517;
+    background-color: #1a1a1a;
     position: relative;
     margin-bottom: 30px;
 }
 
 .skills .skill .progreso {
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
     position: absolute;
     top: 0;
     left: 0;
@@ -325,7 +325,7 @@ html {
     position: absolute;
     height: 40px;
     width: 40px;
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
     border-radius: 50px;
     line-height: 40px;
     text-align: center;
@@ -346,7 +346,7 @@ html {
     }
 
     100% {
-        width: 75%;
+        width: 80%;
     }
 }
 
@@ -361,7 +361,7 @@ html {
     }
 
     100% {
-        width: 89%;
+        width: 85%;
     }
 }
 
@@ -376,7 +376,7 @@ html {
     }
 
     100% {
-        width: 95%;
+        width: 70%;
     }
 }
 
@@ -391,7 +391,7 @@ html {
     }
 
     100% {
-        width: 81%;
+        width: 75%;
     }
 }
 
@@ -406,7 +406,7 @@ html {
     }
 
     100% {
-        width: 55%;
+        width: 70%;
     }
 }
 
@@ -421,7 +421,7 @@ html {
     }
 
     100% {
-        width: 80%;
+        width: 85%;
     }
 }
 
@@ -436,7 +436,7 @@ html {
     }
 
     100% {
-        width: 70%;
+        width: 85%;
     }
 }
 
@@ -451,7 +451,7 @@ html {
     }
 
     100% {
-        width: 99%;
+        width: 90%;
     }
 }
 
@@ -466,7 +466,7 @@ html {
     }
 
     100% {
-        width: 65%;
+        width: 80%;
     }
 }
 
@@ -481,13 +481,28 @@ html {
     }
 
     100% {
-        width: 94%;
+        width: 75%;
+    }
+}
+
+.skills .skill .ia {
+    width: 0%;
+    animation: 2s ia forwards;
+}
+
+@keyframes ia {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 85%;
     }
 }
 
 /* SECCION CURRICULUM */
 .curriculum {
-    background-color: #1e2326;
+    background-color: #000;
     color: #fff;
     padding: 50px 20px;
 }
@@ -521,17 +536,17 @@ html {
 }
 
 .curriculum .fila .izquierda {
-    border-right: 2px solid #252A2E;
+    border-right: 2px solid #0b0b0b;
 }
 
 .curriculum .fila .derecha {
-    border-left: 2px solid #252A2E;
+    border-left: 2px solid #0b0b0b;
 }
 
 .curriculum .fila .item {
     padding: 25px;
     margin-bottom: 30px;
-    background-color: #252A2E;
+    background-color: #0b0b0b;
     position: relative;
 }
 
@@ -541,7 +556,7 @@ html {
 }
 
 .curriculum .fila .item .casa {
-    color: #ff6a00;
+    color: #ff5f1f;
     font-size: 22px;
     font-weight: bold;
     display: block;
@@ -549,7 +564,7 @@ html {
 
 .curriculum .fila .item .fecha {
     display: block;
-    color: #ff6a00;
+    color: #ff5f1f;
     margin-bottom: 10px;
 }
 
@@ -558,18 +573,18 @@ html {
 }
 
 .curriculum .fila .izq {
-    border-right: 2px solid #ff6a00;
+    border-right: 2px solid #ff5f1f;
     margin-right: 20px;
 }
 
 .curriculum .fila .der {
-    border-left: 2px solid #ff6a00;
+    border-left: 2px solid #ff5f1f;
     margin-left: 20px;
 }
 
 .curriculum .fila .item .conectori {
     height: 2px;
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
     width: 47px;
     position: absolute;
     top: 50%;
@@ -582,7 +597,7 @@ html {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
     float: right;
     position: relative;
     bottom: 4px;
@@ -590,7 +605,7 @@ html {
 
 .curriculum .fila .item .conectord {
     height: 2px;
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
     width: 47px;
     position: absolute;
     top: 50%;
@@ -603,7 +618,7 @@ html {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
     float: left;
     position: relative;
     bottom: 4px;
@@ -611,7 +626,7 @@ html {
 
 /* SECCION PORTFOLIO */
 .portfolio {
-    background-color: #252A2E;
+    background-color: #0b0b0b;
     color: #fff;
     padding: 50px 20px;
 }
@@ -656,7 +671,7 @@ html {
     width: 0;
     height: 100%;
     text-align: center;
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -696,10 +711,72 @@ html {
     transform: translateY(-5px);
 }
 
+/* Portfolio: proyectos reales */
+.portfolio .portfolio-intro {
+    text-align: center;
+    color: #ccc;
+    margin: -5px auto 25px;
+    max-width: 640px;
+}
+
+.portfolio .galeria .proyecto {
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+.portfolio .galeria .proyecto img {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top;
+    background-color: #000;
+}
+
+.portfolio .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+}
+
+.portfolio .galeria .proyecto-link {
+    flex: 0 1 calc((100% - 44px) / 3);
+    min-width: 280px;
+}
+
+.portfolio .galeria .proyecto {
+    max-width: none;
+    margin: 0;
+}
+
+.portfolio .galeria .proyecto .overlay h3 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    min-width: 280px;
+}
+
+.portfolio .galeria .proyecto .overlay p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    min-width: 280px;
+}
+
+.portfolio .galeria .proyecto-cant {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 9px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
 /* SECCION CONTACTO */
 .contacto {
     background-image: url(img/contact_bg.png);
-    background-color: #1e2326;
+    background-color: #000;
     color: #fff;
     padding: 50px 0;
 }
@@ -733,7 +810,7 @@ html {
     padding: 18px;
     border: none;
     margin-bottom: 20px;
-    background-color: #252A2E;
+    background-color: #0b0b0b;
     color: #fff;
     font-size: 18px;
 }
@@ -758,7 +835,7 @@ html {
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
     z-index: -1;
     transition: 1s;
 }
@@ -774,7 +851,7 @@ html {
 .contacto .col .info {
     position: absolute;
     top: 40%;
-    background-color: #252A2E;
+    background-color: #0b0b0b;
     padding: 20px;
     max-swidth: 350px;
     left: 50%;
@@ -790,13 +867,13 @@ html {
 }
 
 .contacto .col .info ul li i {
-    color: #ff6a00;
+    color: #ff5f1f;
     display: inline-block;
     margin-right: 20px;
 }
 
 footer {
-    background-color: #252A2E;
+    background-color: #0b0b0b;
     color: #fff;
     padding: 50px 0 30px 0;
     text-align: center;
@@ -826,7 +903,7 @@ footer .arriba {
     display: block;
     width: 50px;
     height: 50px;
-    background-color: #ff6a00;
+    background-color: #ff5f1f;
     color: #fff;
     position: absolute;
     left: 50%;
@@ -852,7 +929,7 @@ footer .arriba {
         position: absolute;
         right: 0;
         top: 75px;
-        background-color: #252A2E;
+        background-color: #0b0b0b;
         width: 180px;
     }
 
@@ -919,4 +996,460 @@ footer .arriba {
     .contacto .fila .col {
         width: 100%;
     }
+}
+
+/* Portfolio en celular: una columna con separación */
+@media screen and (max-width:700px) {
+    .portfolio .galeria {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+    .portfolio .galeria .proyecto-link {
+        flex-basis: auto;
+        min-width: 0;
+    }
+}
+
+/* =========================================================
+   TEMA NEGRO + NARANJA NEÓN
+   Para cambiar el color en todo el sitio, reemplazá #ff5f1f
+   ========================================================= */
+body { background-color: #000; }
+
+.skills,
+.portfolio,
+footer {
+    background-color: #000;
+}
+
+/* Separadores finos entre secciones */
+.sobremi, .skills, .curriculum, .portfolio, .contacto, footer {
+    border-top: 1px solid rgba(255, 95, 31, 0.15);
+}
+
+/* Brillo neón en logo y títulos */
+.contenedor-header header .logo a,
+.sobremi h2, .skills h2, .curriculum h2, .portfolio h2, .contacto h2 {
+    text-shadow: 0 0 6px rgba(255, 95, 31, 0.9), 0 0 18px rgba(255, 95, 31, 0.6), 0 0 36px rgba(255, 95, 31, 0.35);
+}
+.sobremi h2, .skills h2, .curriculum h2, .portfolio h2, .contacto h2 { color: #fff; }
+
+/* Menú: subrayado neón al pasar el mouse */
+.contenedor-header {
+    border-bottom: 1px solid rgba(255, 95, 31, 0.35);
+    box-shadow: 0 0 18px rgba(255, 95, 31, 0.15);
+}
+nav ul li a:hover { color: #ff5f1f; text-shadow: 0 0 8px rgba(255, 95, 31, 0.8); }
+
+/* Foto de perfil y tarjeta del inicio */
+.inicio .contenido-banner {
+    box-shadow: 0 0 25px rgba(255, 95, 31, 0.35);
+}
+.inicio .contenido-banner img {
+    box-shadow: 0 0 12px rgba(255, 95, 31, 0.8), 0 0 30px rgba(255, 95, 31, 0.4);
+}
+
+/* Cajas internas con borde neón suave */
+.sobremi .fila .col .contenedor-intereses .interes,
+.curriculum .fila .item,
+.contacto .col .info {
+    border: 1px solid rgba(255, 95, 31, 0.3);
+    box-shadow: 0 0 12px rgba(255, 95, 31, 0.08);
+}
+.contacto .col input,
+.contacto .col textarea {
+    background-color: #0b0b0b;
+    border: 1px solid rgba(255, 95, 31, 0.3);
+}
+.contacto .col input:focus,
+.contacto .col textarea:focus {
+    outline: none;
+    border-color: #ff5f1f;
+    box-shadow: 0 0 10px rgba(255, 95, 31, 0.6);
+}
+
+/* Barras de habilidades y círculos con brillo */
+.skills .skill .progreso,
+.skills .skill .progreso span {
+    box-shadow: 0 0 10px rgba(255, 95, 31, 0.8);
+}
+
+/* Botones */
+.sobremi button,
+.contacto button {
+    box-shadow: 0 0 10px rgba(255, 95, 31, 0.5), inset 0 0 6px rgba(255, 95, 31, 0.3);
+}
+
+/* Galería de proyectos */
+.portfolio .galeria .proyecto {
+    border: 1px solid rgba(255, 95, 31, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+}
+.portfolio .galeria .proyecto-link:hover .proyecto {
+    border-color: #ff5f1f;
+    box-shadow: 0 0 14px rgba(255, 95, 31, 0.8), 0 0 40px rgba(255, 95, 31, 0.35);
+}
+
+/* Footer */
+footer .arriba {
+    box-shadow: 0 0 14px rgba(255, 95, 31, 0.9);
+}
+footer .redes a:hover,
+.inicio .contenido-banner .redes a:hover {
+    box-shadow: 0 0 12px rgba(255, 95, 31, 0.9);
+}
+
+/* Links en datos personales y contacto */
+.dato-link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255, 95, 31, 0.6);
+    transition: color 0.3s, text-shadow 0.3s;
+}
+.dato-link:hover {
+    color: #ff5f1f;
+    text-shadow: 0 0 8px rgba(255, 95, 31, 0.8);
+}
+.contacto .col .info .dato-link { color: #fff; }
+
+/* Botón "Ver mi GitHub" (envuelve al botón original) */
+.boton-link {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+/* Formulario de contacto */
+#form-contacto { display: contents; }
+.form-aviso {
+    min-height: 1.2em;
+    color: #ff5f1f;
+    font-size: 14px;
+    margin: 4px 0 10px;
+}
+
+/* Interés con nombre largo */
+.sobremi .fila .col .contenedor-intereses .interes .interes-largo {
+    font-size: 11px;
+    letter-spacing: 0;
+}
+
+/* Botones Descargar CV + GitHub */
+.botones-sobremi {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 18px;
+}
+.botones-sobremi .boton-link { margin: 0; }
+
+/* =========================================================
+   FONDO DE ESTRELLAS
+   El canvas va fijo detrás de todo; las secciones quedan
+   transparentes para que se vean las estrellas.
+   ========================================================= */
+#fondo-estrellas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.inicio, .sobremi, .skills, .curriculum, .portfolio, .contacto, footer {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+}
+
+/* Foto de fondo del inicio: se mantiene pero suave, para ver las estrellas */
+.inicio {
+    background: transparent;
+    overflow: hidden;
+}
+.inicio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(img/fondo.jpg) center / cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+.inicio .contenido-banner { background-color: rgba(0, 0, 0, 0.78); }
+
+/* Contacto: mantiene el mapa de puntos, sin fondo sólido */
+.contacto { background-color: transparent; }
+
+/* Menú semitransparente */
+.contenedor-header {
+    background: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* Cajas internas apenas translúcidas */
+.sobremi .fila .col .contenedor-intereses .interes,
+.curriculum .fila .item,
+.contacto .col .info,
+.contacto .col input,
+.contacto .col textarea {
+    background-color: rgba(11, 11, 11, 0.85);
+}
+
+/* Bootstrap pone el fondo del body en blanco: lo forzamos a negro
+   para que el fondo de estrellas se vea bien */
+html,
+body {
+    background-color: #000 !important;
+    color: #fff;
+}
+
+/* Caja de datos sobre el mapa: centrada y sin que el email se corte */
+.contacto .col .info {
+    top: 195px;
+    width: max-content;
+    max-width: 92%;
+    padding: 18px 22px;
+}
+.contacto .col .info ul {
+    padding-left: 0;
+    margin: 0;
+}
+.contacto .col .info ul li {
+    margin-bottom: 12px;
+    white-space: nowrap;
+    font-size: 15px;
+}
+.contacto .col .info ul li:last-child { margin-bottom: 0; }
+.contacto .col .info ul li i {
+    margin-right: 12px;
+    width: 16px;
+    text-align: center;
+}
+@media screen and (max-width: 700px) {
+    .contacto .col .info { top: 50%; }
+    .contacto .col .info ul li { font-size: 13px; }
+}
+
+/* =========================================================
+   PORTADA: fondo con código real de mis proyectos
+   (reemplaza la foto anterior)
+   ========================================================= */
+.inicio::before { display: none; }
+
+.inicio .codigo-fondo {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    /* se desvanece hacia los bordes para no competir con la tarjeta */
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0) 80%);
+            mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0) 80%);
+}
+
+.inicio .codigo-fondo pre {
+    margin: 0;
+    padding: 40px 6vw;
+    font-family: "JetBrains Mono", Consolas, "Courier New", monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.42);
+    white-space: pre;
+    filter: blur(1.3px);
+    opacity: 0.55;
+    animation: codigo-sube 70s linear infinite;
+}
+
+.inicio .codigo-fondo .cf-kw  { color: #ff5f1f; }
+.inicio .codigo-fondo .cf-str { color: #b48cff; }
+.inicio .codigo-fondo .cf-com { color: rgba(255, 255, 255, 0.28); font-style: italic; }
+
+@keyframes codigo-sube {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .inicio .codigo-fondo pre { animation: none; }
+}
+
+@media screen and (max-width: 700px) {
+    .inicio .codigo-fondo pre { font-size: 11px; padding: 30px 14px; }
+}
+
+/* Código de fondo: dos columnas y siempre en fuente monoespaciada */
+.inicio .codigo-fondo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.inicio .codigo-fondo pre,
+.inicio .codigo-fondo pre * {
+    font-family: Consolas, "Cascadia Code", "Courier New", monospace !important;
+}
+.inicio .codigo-fondo pre { padding: 40px 3vw; overflow: hidden; }
+.inicio .codigo-fondo .cf-col2 { animation-duration: 90s; animation-delay: -30s; }
+@media screen and (max-width: 700px) {
+    .inicio .codigo-fondo { grid-template-columns: 1fr; }
+    .inicio .codigo-fondo .cf-col2 { display: none; }
+}
+
+/* Aviso al tocar el email */
+#aviso-email {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    transform: translate(-50%, 20px);
+    background: #0b0b0b;
+    color: #fff;
+    border: 1px solid #ff5f1f;
+    box-shadow: 0 0 14px rgba(255, 95, 31, 0.6);
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    max-width: 90vw;
+    text-align: center;
+}
+#aviso-email.visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* =========================================================
+   TRABAJEMOS JUNTOS (WhatsApp con fotos y audios)
+   ========================================================= */
+.cta-portada {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 10px 22px;
+    border: 2px solid #ff5f1f;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    box-shadow: 0 0 12px rgba(255, 95, 31, 0.6);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.cta-portada:hover {
+    background: #ff5f1f;
+    color: #fff;
+    box-shadow: 0 0 22px rgba(255, 95, 31, 0.95);
+}
+
+.trabajemos {
+    position: relative;
+    z-index: 1;
+    padding: 70px 20px;
+    border-top: 1px solid rgba(255, 95, 31, 0.15);
+}
+.trabajemos-caja {
+    max-width: 820px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    padding: 45px 30px;
+    border: 1px solid rgba(255, 95, 31, 0.45);
+    border-radius: 16px;
+    background: rgba(11, 11, 11, 0.85);
+    box-shadow: 0 0 30px rgba(255, 95, 31, 0.2);
+}
+.trabajemos-kicker {
+    color: #ff5f1f;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.trabajemos h2 {
+    font-family: 'Righteous';
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 6px rgba(255, 95, 31, 0.9), 0 0 18px rgba(255, 95, 31, 0.6), 0 0 36px rgba(255, 95, 31, 0.35);
+}
+.trabajemos-texto {
+    color: #ccc;
+    font-size: 17px;
+    max-width: 600px;
+    margin: 0 auto 28px;
+    line-height: 1.6;
+}
+.trabajemos-texto strong { color: #fff; }
+.trabajemos-botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+.btn-wa, .btn-mail {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px;
+    border-radius: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.3s, background 0.3s;
+}
+.btn-wa {
+    background: #ff5f1f;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 16px rgba(255, 95, 31, 0.8);
+}
+.btn-wa i { font-size: 22px; }
+.btn-wa:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 0 28px rgba(255, 95, 31, 1); }
+.btn-mail {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+}
+.btn-mail:hover { color: #fff; border-color: #ff5f1f; box-shadow: 0 0 12px rgba(255, 95, 31, 0.6); }
+.trabajemos-nota {
+    margin: 22px 0 0;
+    color: #999;
+    font-size: 14px;
+}
+.trabajemos-nota i { color: #ff5f1f; margin-right: 4px; }
+
+/* Botón flotante */
+.wa-flotante {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 150;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px 12px 14px;
+    border-radius: 40px;
+    background: #ff5f1f;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 0 14px rgba(255, 95, 31, 0.9), 0 6px 18px rgba(0, 0, 0, 0.5);
+    animation: wa-latido 2.8s ease-in-out infinite;
+}
+.wa-flotante i { font-size: 26px; }
+.wa-flotante:hover { color: #fff; animation-play-state: paused; transform: scale(1.05); }
+@keyframes wa-latido {
+    0%, 100% { box-shadow: 0 0 14px rgba(255, 95, 31, 0.9), 0 6px 18px rgba(0, 0, 0, 0.5); }
+    50%      { box-shadow: 0 0 26px rgba(255, 95, 31, 1), 0 6px 18px rgba(0, 0, 0, 0.5); }
+}
+@media (prefers-reduced-motion: reduce) { .wa-flotante { animation: none; } }
+
+@media screen and (max-width: 700px) {
+    .trabajemos h2 { font-size: 34px; }
+    .trabajemos-caja { padding: 32px 18px; }
+    .btn-wa, .btn-mail { width: 100%; justify-content: center; }
+    /* en celular el flotante es solo el ícono */
+    .wa-flotante { padding: 14px; right: 16px; bottom: 16px; }
+    .wa-flotante span { display: none; }
 }

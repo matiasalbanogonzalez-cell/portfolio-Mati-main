@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Detalle del Proyecto</title>
-    <link rel="stylesheet" href="estilo.css">
+    <title>Proyecto | Matias Gonzalez</title>
+    <link rel="stylesheet" href="estilo.css?v=12">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #1e2326;
+            background-color: #000;
             font-family: 'Work Sans';
         }
         .proyecto-detalle {
@@ -19,13 +19,15 @@
             align-items: center;
             justify-content: center;
             padding: 40px 20px;
-            background-color: #1e2326;
-            margin-top: 60px;
+            background-color: transparent;
+            position: relative;
+            z-index: 1;
+            margin-top: 90px;
         }
         .proyecto-container {
             max-width: 900px;
             width: 100%;
-            background: #252a2e;
+            background: #0b0b0b;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -41,7 +43,7 @@
         .proyecto-info h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #ff6a00;
+            color: #ff5f1f;
         }
         .proyecto-info p {
             font-size: 1.1rem;
@@ -58,11 +60,11 @@
         .btn-volver {
             display: inline-block;
             background-color: transparent;
-            border: 2px solid #ff6a00;
+            border: 2px solid #ff5f1f;
             width: fit-content;
             padding: 10px 22px;
             font-size: 1rem;
-            color: #ff6a00;
+            color: #ff5f1f;
             position: relative;
             z-index: 10;
             text-decoration: none;
@@ -74,7 +76,7 @@
             left: 0;
             width: 0;
             height: 100%;
-            background-color: #ff6a00;
+            background-color: #ff5f1f;
             z-index: -1;
             transition: width 1s;
         }
@@ -90,9 +92,135 @@
             color: #ccc;
         }
         .proyecto-no-encontrado h2 {
-            color: #ff6a00;
+            color: #ff5f1f;
             margin-bottom: 15px;
         }
+
+        /* ---- Galería de pantallas ---- */
+        .proyecto-container { max-width: 1100px; }
+        .visor {
+            position: relative;
+            background: #1a1a1a;
+            aspect-ratio: 16 / 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .visor img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: opacity .25s;
+        }
+        .visor .flecha {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 2px solid #ff5f1f;
+            background: rgba(0, 0, 0, .85);
+            color: #ff5f1f;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background .3s, color .3s;
+        }
+        .visor .flecha:hover { background: #ff5f1f; color: #fff; }
+        .visor .flecha.izq { left: 15px; }
+        .visor .flecha.der { right: 15px; }
+        .visor .contador {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, .85);
+            color: #fff;
+            font-size: 13px;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .pantalla-info {
+            padding: 18px 40px;
+            border-bottom: 1px solid #222;
+            min-height: 92px;
+        }
+        .pantalla-info h4 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin: 0 0 6px;
+        }
+        .pantalla-info h4 span { color: #ff5f1f; margin-right: 8px; }
+        .pantalla-info p { color: #bbb; margin: 0; }
+        .miniaturas {
+            display: flex;
+            gap: 10px;
+            padding: 15px 40px;
+            overflow-x: auto;
+            border-bottom: 1px solid #222;
+        }
+        .miniaturas button {
+            flex: 0 0 auto;
+            width: 120px;
+            aspect-ratio: 16 / 10;
+            padding: 0;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            overflow: hidden;
+            background: #1a1a1a;
+            cursor: pointer;
+            opacity: .55;
+            transition: opacity .3s, border-color .3s;
+        }
+        .miniaturas button img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+        .miniaturas button:hover { opacity: .9; }
+        .miniaturas button.activa { opacity: 1; border-color: #ff5f1f; }
+        .proyecto-info .categoria {
+            color: #ff5f1f;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: .85rem;
+            margin-bottom: 8px;
+        }
+        .tecnologias { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 5px; padding: 0; list-style: none; }
+        .tecnologias li {
+            border: 1px solid #ff5f1f;
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: .9rem;
+        }
+        .funciones { color: #ccc; padding-left: 0; list-style: none; margin: 15px 0 0; }
+        .funciones li { padding: 6px 0 6px 26px; position: relative; border-bottom: 1px dashed #222; }
+        .funciones li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #ff5f1f;
+            position: absolute;
+            left: 0;
+        }
+        .proyecto-info h3 { color: #fff; font-size: 1.3rem; margin-top: 30px; }
+        @media (max-width: 700px) {
+            .pantalla-info, .miniaturas { padding-left: 20px; padding-right: 20px; }
+            .proyecto-info { padding: 25px 20px; }
+            .proyecto-info h2 { font-size: 1.9rem; }
+            .visor .flecha { width: 38px; height: 38px; }
+            .miniaturas button { width: 90px; }
+        }
+
+        /* ---- Tema negro + neón ---- */
+        .proyecto-container {
+            border: 1px solid rgba(255, 95, 31, .35);
+            box-shadow: 0 0 30px rgba(255, 95, 31, .18);
+        }
+        .proyecto-info h2 {
+            text-shadow: 0 0 6px rgba(255, 95, 31, .9), 0 0 20px rgba(255, 95, 31, .5);
+        }
+        .btn-volver { box-shadow: 0 0 8px rgba(255, 95, 31, .45); }
+        .btn-volver:hover { box-shadow: 0 0 16px rgba(255, 95, 31, .9); }
+        .visor .flecha { box-shadow: 0 0 10px rgba(255, 95, 31, .6); }
+        .miniaturas button.activa { box-shadow: 0 0 12px rgba(255, 95, 31, .9); }
+        .tecnologias li { box-shadow: 0 0 6px rgba(255, 95, 31, .35); }
     </style>
 </head>
 <body>
@@ -128,109 +256,105 @@
             <i class="fa-solid fa-angles-up"></i>
         </a>
         <div class="redes">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-skype"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-solid fa-rss"></i></a>
+            <a href="https://github.com/matiasalbanogonzalez-cell" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://wa.me/5493515160982" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:matiasalbanogonzalez@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="estrellas.js?v=12"></script>
+    <script src="script.js?v=12"></script>
+    <script src="proyectos.js?v=12"></script>
     <script>
-        // Datos de los proyectos
-        const proyectos = {
-            1: {
-                titulo: "Diseño Creativo - Proyecto 1",
-                imagen: "img/p1.jpg",
-                descripcion: "Este es un proyecto de diseño creativo enfocado en fotografía profesional. Se utilizaron técnicas avanzadas de composición y edición para crear una imagen impactante. El proyecto demuestra el dominio de herramientas como Photoshop y la creatividad visual."
-            },
-            2: {
-                titulo: "Diseño Creativo - Proyecto 2",
-                imagen: "img/p2.jpg",
-                descripcion: "Segundo proyecto de la serie de diseños creativos. Este trabajo se destaca por su uso innovador de la luz y las sombras, creando una atmósfera única. Se trata de una fotografía que combina elementos tradicionales con toques modernos."
-            },
-            3: {
-                titulo: "Diseño Creativo - Proyecto 3",
-                imagen: "img/p3.jpg",
-                descripcion: "Tercer proyecto que explora nuevas perspectivas en la fotografía. Este trabajo fue realizado utilizando técnicas de iluminación profesional y postproducción avanzada, resultando en una imagen de alta calidad y gran impacto visual."
-            },
-            4: {
-                titulo: "Diseño Creativo - Proyecto 4",
-                imagen: "img/p4.jpg",
-                descripcion: "Cuarto proyecto que continúa con la línea creativa. Este proyecto demuestra la versatilidad en diferentes estilos y técnicas fotográficas. Se aplicaron conocimientos avanzados de composición y edición para lograr el resultado final."
-            },
-            5: {
-                titulo: "Diseño Creativo - Proyecto 5",
-                imagen: "img/p5.jpg",
-                descripcion: "Quinto proyecto de la galería. Este trabajo se caracteriza por su originalidad y enfoque artístico. Utiliza elementos visuales únicos que lo distinguen del resto, demostrando la capacidad de innovación creativa."
-            },
-            6: {
-                titulo: "Proyecto Asesorando",
-                imagen: "img/asesorando.png",
-                descripcion: "Proyecto especial que muestra experiencia en asesoramiento profesional. Esta imagen captura el momento de interacción y colaboración, demostrando habilidades en comunicación y trabajo en equipo."
-            }
-        };
+        const params = new URLSearchParams(window.location.search);
+        let indice = proyectos.findIndex(p => p.id === params.get("id"));
+        let actual = 0;
 
-        // Función para obtener el parámetro de la URL
-        function obtenerParametroURL(parametro) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(parametro);
+        function mostrarPantalla(n) {
+            const p = proyectos[indice];
+            actual = (n + p.pantallas.length) % p.pantallas.length;
+            const img = document.getElementById("visor-img");
+            img.style.opacity = 0;
+            setTimeout(() => {
+                img.src = rutaPantalla(p, actual + 1);
+                img.alt = p.titulo + " - " + p.pantallas[actual].titulo;
+                img.style.opacity = 1;
+            }, 150);
+            document.getElementById("pantalla-titulo").innerHTML =
+                `<span>${String(actual + 1).padStart(2, "0")}</span>${p.pantallas[actual].titulo}`;
+            document.getElementById("pantalla-texto").textContent = p.pantallas[actual].texto;
+            document.getElementById("contador").textContent = `${actual + 1} / ${p.pantallas.length}`;
+            document.querySelectorAll(".miniaturas button").forEach((b, i) => b.classList.toggle("activa", i === actual));
+            const activa = document.querySelectorAll(".miniaturas button")[actual];
+            if (activa) activa.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
         }
 
-        // Función para cargar el proyecto
         function cargarProyecto() {
-            const idProyecto = obtenerParametroURL('id');
-            const proyecto = proyectos[idProyecto];
-            const contenedor = document.getElementById('proyecto-container');
-
-            if (proyecto) {
-                contenedor.innerHTML = `
-                    <img src="${proyecto.imagen}" alt="${proyecto.titulo}" class="proyecto-imagen">
-                    <div class="proyecto-info">
-                        <h2>${proyecto.titulo}</h2>
-                        <p>${proyecto.descripcion}</p>
-                        <div class="botones-proyecto">
-                            <a href="index.html#portfolio" class="btn-volver">
-                                <i class="fa-solid fa-arrow-left"></i> Volver al Portfolio
-                                <span class="overlay"></span>
-                            </a>
-                            <button class="btn-volver" onclick="navegarProyecto(-1)">
-                                <i class="fa-solid fa-chevron-left"></i> Anterior
-                                <span class="overlay"></span>
-                            </button>
-                            <button class="btn-volver" onclick="navegarProyecto(1)">
-                                Siguiente <i class="fa-solid fa-chevron-right"></i>
-                                <span class="overlay"></span>
-                            </button>
-                        </div>
-                    </div>
-                `;
-            } else {
+            const contenedor = document.getElementById("proyecto-container");
+            if (indice === -1) {
                 contenedor.innerHTML = `
                     <div class="proyecto-no-encontrado">
                         <h2>Proyecto no encontrado</h2>
                         <p>Lo sentimos, no pudimos encontrar el proyecto solicitado.</p>
                         <a href="index.html#portfolio" class="btn-volver">Volver al Portfolio</a>
-                    </div>
-                `;
+                    </div>`;
+                return;
             }
+            const p = proyectos[indice];
+            document.title = p.titulo + " | Matias Gonzalez";
+            contenedor.innerHTML = `
+                <div class="visor">
+                    <img id="visor-img" src="${rutaPantalla(p, 1)}" alt="${p.titulo}">
+                    <span class="contador" id="contador"></span>
+                    <button class="flecha izq" onclick="mostrarPantalla(actual - 1)" aria-label="Pantalla anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="flecha der" onclick="mostrarPantalla(actual + 1)" aria-label="Pantalla siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="pantalla-info">
+                    <h4 id="pantalla-titulo"></h4>
+                    <p id="pantalla-texto"></p>
+                </div>
+                <div class="miniaturas">
+                    ${p.pantallas.map((s, i) => `
+                        <button onclick="mostrarPantalla(${i})" title="${s.titulo}">
+                            <img src="${rutaPantalla(p, i + 1)}" alt="${s.titulo}" loading="lazy">
+                        </button>`).join("")}
+                </div>
+                <div class="proyecto-info">
+                    <p class="categoria">${p.categoria}</p>
+                    <h2>${p.titulo}</h2>
+                    <p>${p.descripcion}</p>
+                    <ul class="tecnologias">${p.tecnologias.map(t => `<li>${t}</li>`).join("")}</ul>
+                    <h3>Funciones principales</h3>
+                    <ul class="funciones">${p.pantallas.map(s => `<li><strong>${s.titulo}:</strong> ${s.texto}</li>`).join("")}</ul>
+                    <div class="botones-proyecto">
+                        ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="btn-volver">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver sitio <span class="overlay"></span></a>` : ""}
+                        <a href="${p.repo}" target="_blank" rel="noopener" class="btn-volver">
+                            <i class="fa-brands fa-github"></i> Ver código <span class="overlay"></span></a>
+                        <a href="index.html#portfolio" class="btn-volver">
+                            <i class="fa-solid fa-arrow-left"></i> Volver al Portfolio <span class="overlay"></span></a>
+                        <button class="btn-volver" onclick="navegarProyecto(-1)">
+                            <i class="fa-solid fa-chevron-left"></i> Anterior <span class="overlay"></span></button>
+                        <button class="btn-volver" onclick="navegarProyecto(1)">
+                            Siguiente <i class="fa-solid fa-chevron-right"></i> <span class="overlay"></span></button>
+                    </div>
+                </div>`;
+            mostrarPantalla(0);
         }
 
-        // Función para navegar entre proyectos
         function navegarProyecto(direccion) {
-            const idActual = parseInt(obtenerParametroURL('id')) || 1;
-            let idNuevo = idActual + direccion;
-
-            // Validar que el ID esté dentro del rango válido (1-6)
-            if (idNuevo < 1) idNuevo = 6;
-            if (idNuevo > 6) idNuevo = 1;
-
-            window.location.href = `project.html?id=${idNuevo}`;
+            const nuevo = (indice + direccion + proyectos.length) % proyectos.length;
+            window.location.href = `project.html?id=${proyectos[nuevo].id}`;
         }
 
-        // Cargar el proyecto cuando la página se cargue
-        window.addEventListener('load', cargarProyecto);
+        // Flechas del teclado para recorrer las pantallas
+        document.addEventListener("keydown", e => {
+            if (indice === -1) return;
+            if (e.key === "ArrowRight") mostrarPantalla(actual + 1);
+            if (e.key === "ArrowLeft") mostrarPantalla(actual - 1);
+        });
+
+        window.addEventListener("load", cargarProyecto);
     </script>
 </body>
 </html>
